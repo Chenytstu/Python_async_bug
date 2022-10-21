@@ -1,0 +1,16 @@
+Exception in callback parse(<Task finishe...imeoutError()>) at D:/Chenyuntian_files/Python_project/DefectDataCollect/Changed_async_Code/getRepositories.py:32
+handle: <Handle parse(<Task finishe...imeoutError()>) at D:/Chenyuntian_files/Python_project/DefectDataCollect/Changed_async_Code/getRepositories.py:32>
+Traceback (most recent call last):
+  File "D:\Chenyuntian_files\Python\lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:/Chenyuntian_files/Python_project/DefectDataCollect/Changed_async_Code/getRepositories.py", line 33, in parse
+    page = task.result()  # 得到返回结果
+  File "D:/Chenyuntian_files/Python_project/DefectDataCollect/Changed_async_Code/getRepositories.py", line 22, in get_url
+    async with session.get(url, headers=header, timeout=5) as response:
+  File "D:\Chenyuntian_files\Python\lib\site-packages\aiohttp\client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+  File "D:\Chenyuntian_files\Python\lib\site-packages\aiohttp\client.py", line 637, in _request
+    break
+  File "D:\Chenyuntian_files\Python\lib\site-packages\aiohttp\helpers.py", line 720, in __exit__
+    raise asyncio.TimeoutError from None
+concurrent.futures._base.TimeoutError
